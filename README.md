@@ -1,33 +1,32 @@
-# NextJS Typescript Boilerplate
+# Setup Instructions
 
-Bootstrap a developer-friendly NextJS app configured with:
+* Clone the repository to your local machine
+* Run `yarn install`
+* Run `yarn dev` to start the development instance
+* Go to http://localhost:3000 to view the development instance
+* Run `yarn test` to run tests
 
-- [Typescript](https://www.typescriptlang.org/)
-- Linting with [ESLint](https://eslint.org/)
-- Formatting with [Prettier](https://prettier.io/)
-- Linting, typechecking and formatting on by default using [`husky`](https://github.com/typicode/husky) for commit hooks
-- Testing with [Jest](https://jestjs.io/) and [`react-testing-library`](https://testing-library.com/docs/react-testing-library/intro)
+# Requirements
 
-## Preview
+* Display 30 public repositories
+* Show name, description, languages, and issues
+* Click the repository to see more information (avatar_url, url, homepage url)
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+# Nice to Have / Future
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-typescript-eslint-jest)
+* I'd split the repository details page into more components so they're more easily testable, this was due to time
+* Add Storybook to allow easier development of individual components
+* Add more testing
 
-## Deploy your own
+# Future features
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+* Search for a repository with debounced queries
+* Pagination
+* Sort repostories
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-typescript-eslint-jest&project-name=with-typescript-eslint-jest&repository-name=with-typescript-eslint-jest)
+# Notes
 
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-typescript-eslint-jest with-typescript-eslint-jest-app
-# or
-yarn create next-app --example with-typescript-eslint-jest with-typescript-eslint-jest-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+* I'd get more information from product to outline exactly what they wanted
+* I chose Semantic UI to put together the page in the interests of effiency given the timeframe
+* I used fetch rather than octokit - the suggested implementation for Github - for the sake of speed within the timeframe
+* I've chosen a long revalidation period - once an hour - as the data doesn't change often
