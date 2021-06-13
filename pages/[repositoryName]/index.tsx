@@ -10,7 +10,7 @@ export default function Home(
   return (
     <div>
       <Head>
-        <title>Github Repositories</title>
+        <title>Github Repository - {props.name}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Container as="main">
